@@ -2,3 +2,6 @@
 .terraform/
 terraform.tfstate
 terraform.tfstate.backup
+
+# Excluir la carpeta de Localstack con caché y logs
+localstack/
