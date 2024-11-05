@@ -1,3 +1,5 @@
+version: '3.8' 
+
 services:
   localstack:
     container_name: "${LOCALSTACK_DOCKER_NAME:-localstack-main}"
@@ -6,7 +8,7 @@ services:
       - "127.0.0.1:4566:4566"             
       - "127.0.0.1:4510-4559:4510-4559"   
     environment:
-      - SERVICES=lambda,dynamodb,apigateway, iam
+      - SERVICES=lambda,dynamodb,apigateway,iam  
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
       - AWS_REGION=${AWS_REGION}
@@ -17,14 +19,17 @@ services:
 
   terraform:
     container_name: "${TERRAFORM_DOCKER_NAME:-terraform-main}"
-    image: hashicorp/terraform:1.5.0
+    build:  
+      context: .  
+      dockerfile: terraform/Dockerfile  
     environment:
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
       - AWS_REGION=${AWS_REGION}
     volumes:
-      - .:/infr
-    working_dir: /infra
+      - .:/infr  
+      - terraform_state:/infr/terraform.tfstate
+    working_dir: /infr  
     depends_on:
       - localstack
     
