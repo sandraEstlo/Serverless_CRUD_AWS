@@ -1,0 +1,181 @@
+SERVICES variable is ignored if EAGER_SERVICE_LOADING=0.
+2024-10-21T09:35:34.956  WARN --- [  Thread-108] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
+2024-10-21T09:35:34.956  WARN --- [  Thread-108] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
+2024-10-21T09:35:34.957  INFO --- [  Thread-108] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+2024-10-21T09:35:34.957  INFO --- [  Thread-108] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+2024-10-21T09:35:57.550  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS iam.GetUser => 200
+2024-10-21T09:35:57.615  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS iam.GetPolicy => 404 (NoSuchEntity)
+2024-10-21T09:35:57.624  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS iam.GetRole => 404 (NoSuchEntity)
+2024-10-21T09:35:57.660  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS iam.ListEntitiesForPolicy => 200
+2024-10-21T09:35:57.954  INFO --- [  Thread-126] l.services.dynamodb.server : Initializing DynamoDB Local with the following configuration:
+2024-10-21T09:35:57.955  INFO --- [  Thread-126] l.services.dynamodb.server : Port:	39775
+2024-10-21T09:35:57.955  INFO --- [  Thread-126] l.services.dynamodb.server : InMemory:	false
+2024-10-21T09:35:57.955  INFO --- [  Thread-126] l.services.dynamodb.server : DbPath:	/var/lib/localstack/tmp/state/dynamodb
+2024-10-21T09:35:57.955  INFO --- [  Thread-126] l.services.dynamodb.server : SharedDb:	false
+2024-10-21T09:35:57.955  INFO --- [  Thread-126] l.services.dynamodb.server : shouldDelayTransientStatuses:	false
+2024-10-21T09:35:57.955  INFO --- [  Thread-126] l.services.dynamodb.server : CorsParams:	*
+2024-10-21T09:35:57.964  INFO --- [  Thread-126] l.services.dynamodb.server : 
+2024-10-21T09:35:59.148  INFO --- [   asgi_gw_1] localstack.utils.bootstrap : Execution of "require" took 1558.48ms
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : 09:35:59.212 [qtp662925691-26] WARN  com.amazonaws.services.dynamodbv2.local.server.LocalDynamoDBServerHandler - DynamoDBLocalServiceException exception occured
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : com.amazonaws.services.dynamodbv2.exceptions.DynamoDBLocalServiceException: Cannot do operations on a non-existent table
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.exceptions.AWSExceptionFactory.buildLocalServiceException(AWSExceptionFactory.java:93) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.exceptions.AWSExceptionFactory.buildAWSException(AWSExceptionFactory.java:58) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.shared.access.api.DynamoDbApiFunction.validateTableExists(DynamoDbApiFunction.java:67) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.shared.access.api.dp.GetItemFunction.apply(GetItemFunction.java:45) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.shared.access.awssdkv1.client.LocalAmazonDynamoDB.getItem(LocalAmazonDynamoDB.java:266) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.server.LocalDynamoDBRequestHandler.getItem(LocalDynamoDBRequestHandler.java:296) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.dispatchers.GetItemDispatcher.enact(GetItemDispatcher.java:18) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.dispatchers.GetItemDispatcher.enact(GetItemDispatcher.java:12) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.server.LocalDynamoDBServerHandler.packageDynamoDBResponse(LocalDynamoDBServerHandler.java:395) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.server.LocalDynamoDBServerHandler.handle(LocalDynamoDBServerHandler.java:482) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:257) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1345) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.224  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:205) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1247) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:220) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.Server.handle(Server.java:505) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:370) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:267) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305) ~[jetty-io-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103) ~[jetty-io-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117) ~[jetty-io-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333) ~[jetty-util-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310) ~[jetty-util-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168) ~[jetty-util-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:132) ~[jetty-util-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:698) [jetty-util-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:804) [jetty-util-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at java.lang.Thread.run(Unknown Source) [?:?]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : 09:35:59.212 [qtp662925691-24] WARN  com.amazonaws.services.dynamodbv2.local.server.LocalDynamoDBServerHandler - DynamoDBLocalServiceException exception occured
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : com.amazonaws.services.dynamodbv2.exceptions.DynamoDBLocalServiceException: Cannot do operations on a non-existent table
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.exceptions.AWSExceptionFactory.buildLocalServiceException(AWSExceptionFactory.java:93) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.exceptions.AWSExceptionFactory.buildAWSException(AWSExceptionFactory.java:58) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.shared.access.api.DynamoDbApiFunction.validateTableExists(DynamoDbApiFunction.java:67) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.shared.access.api.dp.GetItemFunction.apply(GetItemFunction.java:45) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.shared.access.awssdkv1.client.LocalAmazonDynamoDB.getItem(LocalAmazonDynamoDB.java:266) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.server.LocalDynamoDBRequestHandler.getItem(LocalDynamoDBRequestHandler.java:296) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.dispatchers.GetItemDispatcher.enact(GetItemDispatcher.java:18) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.dispatchers.GetItemDispatcher.enact(GetItemDispatcher.java:12) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.server.LocalDynamoDBServerHandler.packageDynamoDBResponse(LocalDynamoDBServerHandler.java:395) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at com.amazonaws.services.dynamodbv2.local.server.LocalDynamoDBServerHandler.handle(LocalDynamoDBServerHandler.java:482) ~[DynamoDBLocal.jar:?]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:257) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1345) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:205) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1247) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:220) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.225  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.Server.handle(Server.java:505) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.226  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:370) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.226  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:267) ~[jetty-server-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.226  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305) ~[jetty-io-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.226  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103) ~[jetty-io-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.226  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117) ~[jetty-io-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.231  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333) ~[jetty-util-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.231  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310) ~[jetty-util-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.231  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168) ~[jetty-util-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.231  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:132) ~[jetty-util-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.231  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:698) [jetty-util-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.231  INFO --- [  Thread-126] l.services.dynamodb.server : at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:804) [jetty-util-9.4.18.v20190429.jar:9.4.18.v20190429]
+2024-10-21T09:35:59.231  INFO --- [  Thread-126] l.services.dynamodb.server : at java.lang.Thread.run(Unknown Source) [?:?]
+2024-10-21T09:35:59.258  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.GetItem => 400 (ResourceNotFoundException)
+2024-10-21T09:35:59.260  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.GetItem => 400 (ResourceNotFoundException)
+2024-10-21T09:35:59.682  INFO --- [   asgi_gw_3] localstack.utils.bootstrap : Execution of "_load_service_plugin" took 519.48ms
+2024-10-21T09:35:59.683  INFO --- [   asgi_gw_3] localstack.utils.bootstrap : Execution of "require" took 520.33ms
+2024-10-21T09:35:59.718  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS apigateway.GetRestApi => 404 (NotFoundException)
+2024-10-21T09:35:59.721  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS dynamodb.DescribeTable => 400 (ResourceNotFoundException)
+2024-10-21T09:35:59.729  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS apigateway.GetResource => 404 (NotFoundException)
+2024-10-21T09:35:59.738  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS apigateway.GetMethod => 404 (NotFoundException)
+2024-10-21T09:35:59.779  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS apigateway.GetIntegration => 404 (NotFoundException)
+2024-10-21T09:35:59.819  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS apigateway.GetDeployment => 404 (NotFoundException)
+2024-10-21T09:35:59.872  INFO --- [   asgi_gw_3] localstack.services.infra  : Starting mock Lambda service on http port 4566 ...
+2024-10-21T09:36:00.392  INFO --- [   asgi_gw_3] localstack.utils.bootstrap : Execution of "require" took 624.41ms
+2024-10-21T09:36:00.399  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS lambda.GetFunction => 404 (ResourceNotFoundException)
+2024-10-21T09:36:05.290  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS iam.GetUser => 200
+2024-10-21T09:36:05.328  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS apigateway.CreateRestApi => 201
+2024-10-21T09:36:05.343  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS iam.CreatePolicy => 200
+2024-10-21T09:36:05.343  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS iam.CreateRole => 200
+2024-10-21T09:36:05.374  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS apigateway.GetRestApi => 200
+2024-10-21T09:36:05.382  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS iam.GetPolicy => 200
+2024-10-21T09:36:05.388  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS iam.GetRole => 200
+2024-10-21T09:36:05.401  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS apigateway.GetResources => 200
+2024-10-21T09:36:05.406  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS iam.ListRolePolicies => 200
+2024-10-21T09:36:05.409  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS iam.GetPolicyVersion => 200
+2024-10-21T09:36:05.419  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS iam.ListAttachedRolePolicies => 200
+2024-10-21T09:36:05.440  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS apigateway.CreateResource => 200
+2024-10-21T09:36:05.443  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS iam.AttachRolePolicy => 200
+2024-10-21T09:36:05.452  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS apigateway.GetResource => 200
+2024-10-21T09:36:05.454  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS iam.ListEntitiesForPolicy => 200
+2024-10-21T09:36:05.483  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS apigateway.PutMethod => 200
+2024-10-21T09:36:05.490  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS dynamodb.CreateTable => 200
+2024-10-21T09:36:05.501  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS apigateway.PutIntegration => 200
+2024-10-21T09:36:05.508  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS apigateway.GetIntegration => 200
+2024-10-21T09:36:05.526  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS apigateway.CreateDeployment => 200
+2024-10-21T09:36:05.533  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS apigateway.GetDeployment => 200
+2024-10-21T09:36:05.535  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-10-21T09:36:05.564  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-10-21T09:36:05.577  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS dynamodb.DescribeContinuousBackups => 400 (UnknownOperationException)
+2024-10-21T09:36:05.589  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.DescribeTimeToLive => 200
+2024-10-21T09:36:05.594  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS dynamodb.ListTagsOfResource => 200
+2024-10-21T09:36:05.606  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2024-10-21T09:36:05.612  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS dynamodb.PutItem => 200
+2024-10-21T09:36:05.629  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS dynamodb.GetItem => 200
+2024-10-21T09:36:05.635  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS dynamodb.GetItem => 200
+2024-10-21T09:36:06.136  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS lambda.CreateFunction => 200
+2024-10-21T09:36:06.145  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-10-21T09:36:11.163  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-10-21T09:36:11.173  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-10-21T09:36:11.182  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS lambda.ListVersionsByFunction => 200
+2024-10-21T09:36:11.191  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS lambda.GetFunctionCodeSigningConfig => 200
+2024-10-21T09:36:15.986  INFO --- [   asgi_gw_5] l.s.apigateway.integration : Method request body before transformations: 
+2024-10-21T09:36:16.444  INFO --- [   asgi_gw_5] l.u.container_networking   : Determined main container network: crud_dynamodb_default
+2024-10-21T09:36:16.448  INFO --- [   asgi_gw_5] l.u.container_networking   : Determined main container target IP: 172.19.0.2
+2024-10-21T09:36:16.448  INFO --- [   asgi_gw_5] l.s.a.lambda_executors     : Running lambda: arn:aws:lambda:us-east-1:000000000000:function:productHandler
+2024-10-21T09:36:16.900  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-10-21T09:36:17.137  INFO --- [   asgi_gw_5] localstack.request.http    : GET /restapis/tgl0r2ed1p/dev/_user_request_/products => 200
+2024-10-21T09:36:58.133  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS iam.GetUser => 200
+2024-10-21T09:36:58.159  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS iam.GetPolicy => 200
+2024-10-21T09:36:58.161  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS apigateway.GetRestApi => 200
+2024-10-21T09:36:58.165  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS iam.GetRole => 200
+2024-10-21T09:36:58.183  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.GetItem => 200
+2024-10-21T09:36:58.186  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS dynamodb.GetItem => 200
+2024-10-21T09:36:58.193  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS iam.ListRolePolicies => 200
+2024-10-21T09:36:58.195  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS apigateway.GetResources => 200
+2024-10-21T09:36:58.198  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS iam.GetPolicyVersion => 200
+2024-10-21T09:36:58.208  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS iam.ListAttachedRolePolicies => 200
+2024-10-21T09:36:58.215  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-10-21T09:36:58.217  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS apigateway.GetResource => 200
+2024-10-21T09:36:58.228  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS iam.ListEntitiesForPolicy => 200
+2024-10-21T09:36:58.231  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS apigateway.GetMethod => 200
+2024-10-21T09:36:58.235  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS dynamodb.DescribeContinuousBackups => 400 (UnknownOperationException)
+2024-10-21T09:36:58.243  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS dynamodb.DescribeTimeToLive => 200
+2024-10-21T09:36:58.249  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS apigateway.GetIntegration => 200
+2024-10-21T09:36:58.251  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS dynamodb.ListTagsOfResource => 200
+2024-10-21T09:36:58.260  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS apigateway.GetDeployment => 200
+2024-10-21T09:36:58.271  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-10-21T09:36:58.279  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS lambda.ListVersionsByFunction => 200
+2024-10-21T09:36:58.287  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS lambda.GetFunctionCodeSigningConfig => 200
+2024-10-21T09:37:00.109  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS iam.GetUser => 200
+2024-10-21T09:37:04.456  INFO --- [   asgi_gw_4] localstack.request.aws     : AWS iam.GetUser => 200
+2024-10-21T09:37:04.478  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS apigateway.GetStage => 200
+2024-10-21T09:37:04.480  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS iam.DetachRolePolicy => 200
+2024-10-21T09:37:04.497  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS lambda.DeleteFunction => 200
+2024-10-21T09:37:04.501  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS apigateway.DeleteStage => 202
+2024-10-21T09:37:04.506  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS apigateway.DeleteDeployment => 202
+2024-10-21T09:37:04.520  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS iam.ListPolicyVersions => 200
+2024-10-21T09:37:04.522  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.DeleteItem => 200
+2024-10-21T09:37:04.523  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS dynamodb.DeleteItem => 200
+2024-10-21T09:37:04.529  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS apigateway.DeleteIntegration => 204
+2024-10-21T09:37:04.533  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS iam.ListInstanceProfilesForRole => 200
+2024-10-21T09:37:04.546  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS iam.ListAttachedRolePolicies => 200
+2024-10-21T09:37:04.547  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS iam.DeletePolicy => 200
+2024-10-21T09:37:04.552  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS apigateway.DeleteMethod => 200
+2024-10-21T09:37:04.561  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS iam.DeleteRole => 200
+2024-10-21T09:37:04.569  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS apigateway.DeleteResource => 200
+2024-10-21T09:37:04.578  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS apigateway.DeleteRestApi => 202
+2024-10-21T09:37:04.592  INFO --- [   asgi_gw_6] localstack.request.aws     : AWS dynamodb.DeleteTable => 200
+2024-10-21T09:37:04.610  INFO --- [   asgi_gw_5] localstack.request.aws     : AWS dynamodb.DescribeTable => 400 (ResourceNotFoundException)
