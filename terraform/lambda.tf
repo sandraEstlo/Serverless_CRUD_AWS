@@ -3,8 +3,8 @@ resource "aws_lambda_function" "product_handler" {
   function_name    = "productHandler"
   runtime          = "python3.8"
   handler          = "handler.lambda_handler"
-  filename         = "${path.module}/../lambda/handler.zip"
-  source_code_hash = filebase64sha256("../lambda/handler.zip")
+  filename         = "/workspace/lambda/handler.zip"
+  source_code_hash = filebase64sha256("/workspace/lambda/handler.zip")
 
   environment {
     variables = {

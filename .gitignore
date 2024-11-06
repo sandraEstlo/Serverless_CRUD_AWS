@@ -1,8 +1,3 @@
-# Excluir carpetas terraform
-.terraform/
-terraform.tfstate
-terraform.tfstate.backup
-.terraform.lock.hcl
 
 # Excluir la carpeta de Localstack con caché y logs
 localstack/

@@ -1,9 +1,7 @@
-version: '3.8' 
-
 services:
   localstack:
+    image: localstack/localstack:latest
     container_name: "${LOCALSTACK_DOCKER_NAME:-localstack-main}"
-    image: localstack/localstack:1.0.4
     ports:
       - "127.0.0.1:4566:4566"             
       - "127.0.0.1:4510-4559:4510-4559"   
@@ -14,22 +12,20 @@ services:
       - AWS_REGION=${AWS_REGION}
       - DEBUG=${DEBUG:-0}
     volumes:
-      - "./localstack:/var/lib/localstack"
-      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./localstack_data:/var/lib/localstack"
+      - "./lambda:/workspace/lambda"
 
   terraform:
-    container_name: "${TERRAFORM_DOCKER_NAME:-terraform-main}"
-    build:  
-      context: .  
-      dockerfile: terraform/Dockerfile  
+    image: hashicorp/terraform:latest
+    container_name: terraform-main
+    volumes:
+      - "./terraform:/infr"
+      - "./lambda:/workspace/lambda"
+    working_dir: /infr 
     environment:
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
       - AWS_REGION=${AWS_REGION}
-    volumes:
-      - .:/infr  
-      - terraform_state:/infr/terraform.tfstate
-    working_dir: /infr  
     depends_on:
       - localstack
     
