@@ -18,3 +18,7 @@ variable "dynamodb_table_name" {
 variable "localstack_lambda_account_id" {
   default = "000000000000"
 }
+
+variable "localstack_endpoint_url" {
+  default = "http://localstack:4566"
+}
